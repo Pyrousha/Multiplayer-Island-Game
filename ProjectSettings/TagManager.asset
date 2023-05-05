@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BG
+    uniqueID: 3739186869
+    locked: 0
+  - name: Islands
+    uniqueID: 3886150279
+    locked: 0
+  - name: PlayerTiles
+    uniqueID: 3797898609
+    locked: 0
