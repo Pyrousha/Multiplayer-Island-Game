@@ -12,7 +12,7 @@ TagManager:
   - Water
   - UI
   - 
-  - 
+  - Tile
   - 
   - 
   - 
@@ -49,4 +49,7 @@ TagManager:
     locked: 0
   - name: PlayerTiles
     uniqueID: 3797898609
+    locked: 0
+  - name: UI
+    uniqueID: 1770927343
     locked: 0
