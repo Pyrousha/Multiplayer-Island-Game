@@ -15,8 +15,8 @@ public class NetworkManger_IslandGame : NetworkManager
         CSteamID steamID = SteamMatchmaking.GetLobbyMemberByIndex(SteamLobby.LobbyID, numPlayers - 1);
 
         PlayerUI_Lobby playerUI = conn.identity.GetComponent<PlayerUI_Lobby>();
-        playerUI.SetSteamID(steamID.m_SteamID);
 
         playerUI.SetPlayerIndex(numPlayers - 1);
+        playerUI.SetSteamID(steamID.m_SteamID);
     }
 }

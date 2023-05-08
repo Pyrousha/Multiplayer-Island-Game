@@ -18,6 +18,11 @@ public class PlayerUI_Lobby : NetworkBehaviour
         playerIndex = _playerIndex;
     }
 
+    // private void UpdateColor()
+    // {
+    //     playerName.color = GameController.Instance.Colors[playerIndex];
+    // }
+
     [SyncVar(hook = nameof(HandleSteamIDUpdated))]
     private ulong steamID;
 
@@ -37,9 +42,7 @@ public class PlayerUI_Lobby : NetworkBehaviour
     public override void OnStartClient()
     {
         avatarImageLoaded = Callback<AvatarImageLoaded_t>.Create(OnAvatarImageLoaded);
-        Debug.Log("playerIndex: " + playerIndex);
-        playerName.color = GameController.Instance.Colors[playerIndex];
-
+        // Debug.Log("playerIndex: " + playerIndex);
         base.OnStartClient();
     }
 
@@ -56,6 +59,7 @@ public class PlayerUI_Lobby : NetworkBehaviour
         CSteamID steamID = new CSteamID(newSteamID);
 
         playerName.text = SteamFriends.GetFriendPersonaName(steamID);
+        playerName.color = GameController.Instance.Colors[playerIndex];
 
         int imageID = SteamFriends.GetLargeFriendAvatar(steamID);
         if (imageID == -1)

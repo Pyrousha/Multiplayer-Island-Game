@@ -14,5 +14,9 @@ public class GameController : Singleton<GameController>
     [SerializeField] private List<PlayerUI> playerUIs;
 
     [SerializeField] private Color[] playerColors;
+
+    [SerializeField] private Sprite[] tileSprites;
+    public Sprite[] TileSprites => tileSprites;
+
     public Color[] Colors => playerColors;
 }
